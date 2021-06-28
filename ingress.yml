@@ -35,3 +35,17 @@ spec:
               name: leaderboard-api
               port:
                 number: 5001
+        - path: /api/LiveCompetition/?(.*)
+          pathType: Prefix
+          backend: 
+            service:
+              name: competition-api
+              port:
+                number: 5001
+        - path: /api/CompetitionTests/?(.*)
+          pathType: Prefix
+          backend: 
+            service:
+              name: competition-api
+              port:
+                number: 5001
