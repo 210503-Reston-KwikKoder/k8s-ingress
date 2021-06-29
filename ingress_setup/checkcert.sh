@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 kubectl get certificate --namespace kwikkoder
 
 kubectl describe certificate --namespace kwikkoder 
