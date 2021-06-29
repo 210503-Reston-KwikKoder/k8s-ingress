@@ -49,3 +49,24 @@ spec:
               name: competition-api
               port:
                 number: 5001
+        - path: /api/Comment/?(.*)
+          pathType: Prefix
+          backend: 
+            service:
+              name: discussion-api
+              port:
+                number: 5001
+        - path: /api/Forum/?(.*)
+          pathType: Prefix
+          backend: 
+            service:
+              name: discussion-api
+              port:
+                number: 5001
+        - path: /api/ForumPost/?(.*)
+          pathType: Prefix
+          backend: 
+            service:
+              name: discussion-api
+              port:
+                number: 5001
