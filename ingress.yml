@@ -70,3 +70,24 @@ spec:
               name: discussion-api
               port:
                 number: 5001
+        - path: /api/TypeTest/?(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: tests-api
+              port:
+                number: 5001
+        - path: /api/UserTest/?(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: tests-api
+              port:
+                number: 5001
+        - path: /api/UserStatTest/?(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: tests-api
+              port:
+                number: 5001
