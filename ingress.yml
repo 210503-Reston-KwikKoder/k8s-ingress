@@ -91,3 +91,10 @@ spec:
               name: tests-api
               port:
                 number: 5001
+        - path: /api/chat-api/?(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: chat-api
+              port:
+                number: 3000
