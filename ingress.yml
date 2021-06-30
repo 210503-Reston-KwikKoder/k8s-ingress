@@ -12,6 +12,9 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     kubernetes.io/tls-acme: 'true'  
     # nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
 spec:
   tls:
     - hosts:
@@ -28,6 +31,7 @@ spec:
               name: website
               port:
                 number: 4200
+
         - path: /lb/?(.*)
           pathType: Prefix
           backend: 
@@ -35,6 +39,7 @@ spec:
               name: leaderboard-api
               port:
                 number: 5001
+
         - path: /competition/?(.*)
           pathType: Prefix
           backend: 
@@ -50,13 +55,15 @@ spec:
               name: discussion-api
               port:
                 number: 5001
+
         - path: /typetest/?(.*)
           pathType: Prefix
           backend:
             service:
               name: tests-api
               port:
-                number: 5001        
+                number: 5001
+        
         - path: /chat-api/?(.*)
           pathType: Prefix
           backend:
