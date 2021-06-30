@@ -28,70 +28,36 @@ spec:
               name: website
               port:
                 number: 4200
-        - path: /LB/?(.*)
+        - path: /lb/?(.*)
           pathType: Prefix
           backend: 
             service:
               name: leaderboard-api
               port:
                 number: 5001
-        - path: /LiveComp/?(.*)
+        - path: /competition/?(.*)
           pathType: Prefix
           backend: 
             service:
               name: competition-api
               port:
                 number: 5001
-        - path: /CompTest/?(.*)
-          pathType: Prefix
-          backend: 
-            service:
-              name: competition-api
-              port:
-                number: 5001
-        - path: /api/Comment/?(.*)
+        
+        - path: /discussion/?(.*)
           pathType: Prefix
           backend: 
             service:
               name: discussion-api
               port:
                 number: 5001
-        - path: /api/Forum/?(.*)
-          pathType: Prefix
-          backend: 
-            service:
-              name: discussion-api
-              port:
-                number: 5001
-        - path: /api/ForumPost/?(.*)
-          pathType: Prefix
-          backend: 
-            service:
-              name: discussion-api
-              port:
-                number: 5001
-        - path: /api/TypeTest/?(.*)
+        - path: /typetest/?(.*)
           pathType: Prefix
           backend:
             service:
               name: tests-api
               port:
-                number: 5001
-        - path: /api/UserTest/?(.*)
-          pathType: Prefix
-          backend:
-            service:
-              name: tests-api
-              port:
-                number: 5001
-        - path: /api/UserStatTest/?(.*)
-          pathType: Prefix
-          backend:
-            service:
-              name: tests-api
-              port:
-                number: 5001
-        - path: /api/chat-api/?(.*)
+                number: 5001        
+        - path: /chat-api/?(.*)
           pathType: Prefix
           backend:
             service:
