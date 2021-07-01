@@ -18,19 +18,19 @@ metadata:
 spec:
   tls:
     - hosts:
-      - 20.69.69.228.nip.io
+      - kwikkoder.com
       secretName: app-web-cert
   rules:
-  - host: 20.69.69.228.nip.io
+  - host: kwikkoder.com
   - http:
       paths:
         - path: /?(.*)
           pathType: Prefix
-          backend: 
+          backend:
             service:
               name: website
               port:
-                number: 4200
+                number: 4200            
 
         - path: /lb/?(.*)
           pathType: Prefix
