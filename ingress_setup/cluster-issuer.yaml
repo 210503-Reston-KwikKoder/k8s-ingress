@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: garrett.ruffner@revature.net
+    email: <youremail>
     privateKeySecretRef:
       name: letsencrypt
     solvers:
