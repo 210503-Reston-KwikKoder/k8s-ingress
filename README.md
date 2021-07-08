@@ -50,4 +50,4 @@ You will need four organization secrets in total.
 
 ## Services Documentation:
 
-kwikkoderrest.pdf contains all the documentation for backend services and the endpoints that each contains.
+p3kwikkoderrest.pdf contains all the documentation for backend services and the endpoints that each contains.
